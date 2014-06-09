@@ -1,6 +1,7 @@
 
 	var store = {},
-		doc = win.document,
+		win = window,
+		doc = document,
 		localStorageName = 'localStorage',
 		scriptTag = 'script',
 		storage
@@ -160,4 +161,4 @@
 	}
 	store.enabled = !store.disabled
 
-	$.storage = store;
+	$.Storage = store;
