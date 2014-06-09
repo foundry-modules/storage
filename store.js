@@ -1,4 +1,4 @@
-;(function(win){
+
 	var store = {},
 		doc = win.document,
 		localStorageName = 'localStorage',
@@ -160,8 +160,4 @@
 	}
 	store.enabled = !store.disabled
 
-	if (typeof module != 'undefined' && module.exports && this.module !== module) { module.exports = store }
-	else if (typeof define === 'function' && define.amd) { define(store) }
-	else { win.store = store }
-
-})(Function('return this')());
+	$.storage = store;
